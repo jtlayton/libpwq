@@ -104,7 +104,7 @@ compute(void *arg)
     }
 
     if (count != NULL) 
-        (*count)--;
+        atomic_dec(count);
 }
 
 
