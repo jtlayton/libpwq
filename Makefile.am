@@ -1,4 +1,5 @@
 # FIXME: only supports Linux for now
+ACLOCAL_AMFLAGS = -I m4
 
 lib_LTLIBRARIES = libpthread_workqueue.la
 include_HEADERS = include/pthread_workqueue.h
