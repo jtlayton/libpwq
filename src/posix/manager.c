@@ -786,7 +786,7 @@ manager_workqueue_additem(struct _pthread_workqueue *workq, struct work *witem)
         if (scoreboard.idle > 0) // && ((wqlist_mask & wqlist_index_bit) != 0)) // disabling this fringe optimization for now
         {
             pthread_mutex_lock(&wqlist_mtx);
-            pthread_cond_signal(&wqlist_has_work); // don't need to hold the mutex to signal
+            pthread_cond_signal(&wqlist_has_work);
             pthread_mutex_unlock(&wqlist_mtx);
         }
     }
